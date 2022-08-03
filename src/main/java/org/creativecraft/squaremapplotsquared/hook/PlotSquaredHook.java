@@ -35,7 +35,7 @@ public class PlotSquaredHook {
         HashSet<Plot> plots = new HashSet<>();
 
         for (Plot plot : PlotQuery.newQuery().inWorld(world.getName())) {
-            if (!plot.hasOwner()) {
+            if (!plot.hasOwner() || !plot.isBasePlot()) {
                 continue;
             }
 
