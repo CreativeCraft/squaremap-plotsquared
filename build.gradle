@@ -1,0 +1,45 @@
+plugins {
+  id 'com.github.johnrengelman.shadow' version '7.1.1'
+  id 'java'
+}
+
+group = 'org.creativecraft'
+version = '1.0.0'
+
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
+repositories {
+  mavenCentral()
+  maven { url = 'https://hub.spigotmc.org/nexus/content/repositories/public/' }
+  maven { url = 'https://maven.enginehub.org/repo/' }
+  maven { url = 'https://repo.aikar.co/content/groups/aikar/' }
+  maven { url = 'https://repo.papermc.io/repository/maven-public/' }
+  flatDir {
+    dirs 'libs'
+  }
+}
+
+dependencies {
+  compileOnly 'org.spigotmc:spigot-api:1.18-R0.1-SNAPSHOT'
+  compileOnly 'xyz.jpenilla:squaremap-api:1.1.6'
+  compileOnly 'com.plotsquared:PlotSquared-Core'
+  compileOnly 'com.sk89q.worldedit:worldedit-core:7.3.0-SNAPSHOT'
+  implementation 'org.bstats:bstats-bukkit-lite:1.8'
+  implementation platform('com.intellectualsites.bom:bom-1.18.x:1.12')
+}
+
+shadowJar {
+  relocate 'org.bstats', 'org.creativecraft.crashclaimsquaremap.lib.bstats'
+}
+
+processResources {
+  def props = [version: version]
+  inputs.properties props
+  filteringCharset 'UTF-8'
+  filesMatching('plugin.yml') {
+    expand props
+  }
+}
+
+build.dependsOn shadowJar

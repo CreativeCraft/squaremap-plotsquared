@@ -1,0 +1,7 @@
+name: SquaremapPlotSquared
+version: "${version}"
+description: "A squaremap implementation for PlotSquared."
+authors: [Log1x]
+main: org.creativecraft.squaremapplotsquared.SquaremapPlotSquared
+api-version: "1.18"
+depend: [PlotSquared, squaremap]
