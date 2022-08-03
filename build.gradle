@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'org.creativecraft'
-version = '1.0.1'
+version = '1.0.2'
 
 sourceCompatibility = '17'
 targetCompatibility = '17'
@@ -30,7 +30,7 @@ dependencies {
 }
 
 shadowJar {
-  relocate 'org.bstats', 'org.creativecraft.crashclaimsquaremap.lib.bstats'
+  relocate 'org.bstats', 'org.creativecraft.squaremapplotsquared.lib.bstats'
 }
 
 processResources {
