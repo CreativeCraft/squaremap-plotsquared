@@ -1,4 +1,4 @@
-name: SquaremapPlotSquared
+name: squaremap-plotsquared
 version: "${version}"
 description: "A squaremap implementation for PlotSquared."
 authors: [Log1x]

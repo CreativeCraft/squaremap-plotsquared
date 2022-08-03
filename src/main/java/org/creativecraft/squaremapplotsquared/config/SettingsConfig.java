@@ -46,10 +46,10 @@ public class SettingsConfig {
 
         settings.addDefault("settings.style.stroke.color", colorToHex(Color.GREEN));
         settings.addDefault("settings.style.stroke.weight", 1);
-        settings.addDefault("settings.style.stroke.opacity", 0.7D);
+        settings.addDefault("settings.style.stroke.opacity", 1.0D);
 
         settings.addDefault("settings.style.fill.color", colorToHex(Color.GREEN));
-        settings.addDefault("settings.style.fill.opacity", 0.1D);
+        settings.addDefault("settings.style.fill.opacity", 0.2D);
 
         settings.addDefault("settings.tooltip.plot", List.of(
             "Plot ID: <span style=\"font-weight:bold;\">{id}</span><br />",
